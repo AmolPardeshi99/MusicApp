@@ -39,7 +39,6 @@ public class ItemListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView(view);
-        setRecyclerView();
         callAPI();
     }
 
@@ -49,8 +48,9 @@ public class ItemListFragment extends Fragment {
         call.enqueue(new Callback<List<ResponseModel>>() {
             @Override
             public void onResponse(Call<List<ResponseModel>> call, Response<List<ResponseModel>> response) {
-                if (response.code() == HttpURLConnection.HTTP_OK && response.body()!= null){
+                if (response.code() == HttpURLConnection.HTTP_OK ){
                     responseModelList = response.body();
+                    setRecyclerView();
                 }
             }
 
