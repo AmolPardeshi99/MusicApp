@@ -43,13 +43,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sub Title"
-        android:textSize="20dp"
-        android:inputType="Dummy"
+        android:text="Here will be some dummy text"
+        android:textSize="18dp"
+        android:inputType="textMultiLine"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="60dp"
         android:textColor="@color/white"/>
-
-
 
 </LinearLayout>

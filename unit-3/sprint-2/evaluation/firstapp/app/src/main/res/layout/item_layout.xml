@@ -16,11 +16,12 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:padding="5dp"
+            android:src="@drawable/tiktok"
             android:layout_margin="15dp"
             android:scaleType="centerCrop"/>
 
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvitemTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
@@ -30,13 +31,14 @@
             android:layout_toRightOf="@id/iv_itemImage"/>
 
         <TextView
+            android:id="@+id/tvitemSubTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
             android:textSize="19dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/tvTitle"
+            android:layout_below="@id/tvitemTitle"
             android:layout_toRightOf="@id/iv_itemImage"/>
 
     </RelativeLayout>
