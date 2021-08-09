@@ -22,8 +22,8 @@ public class itemViewHolder extends RecyclerView.ViewHolder {
 
     public void setData(ResponseModel responseModel){
         Glide.with(mIvitemImage).load(responseModel.getImage()).into(mIvitemImage);
-        mTvitemTitle.setText(responseModel.getTitle());
-        mTvitemSUbTitle.setText(responseModel.getSubTitle());
+        mTvitemTitle.setText(responseModel.getSubTitle());
+        mTvitemSUbTitle.setText(responseModel.getTitle());
     }
 
 }

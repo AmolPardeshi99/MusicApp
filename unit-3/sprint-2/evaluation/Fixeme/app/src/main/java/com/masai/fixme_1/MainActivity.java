@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             circularProgressIndicator.setProgress(progress);
             if (progress== 100) {
                 Toast.makeText(MainActivity.this,"Your task is completed",Toast.LENGTH_SHORT).show();
-                circularProgressIndicator.setVisibility(View.GONE);
+                //circularProgressIndicator.setVisibility(View.GONE);
             }
         }
     };
