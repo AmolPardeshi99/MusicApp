@@ -15,13 +15,14 @@ import java.util.Objects;
 
 public class MusicService extends Service {
     private MediaPlayer mediaPlayer;
+
     public MusicService() {
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaPlayer = MediaPlayer.create(this,R.raw.shape_of_you);
+        mediaPlayer = MediaPlayer.create(this, R.raw.shape_of_you);
         showNotificationAndStartForeGround();
     }
 

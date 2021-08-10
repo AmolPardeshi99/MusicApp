@@ -10,7 +10,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button mBtnStart, mBtnStop;
-    private Intent intent ;
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mBtnStart = findViewById(R.id.btnStart);
         mBtnStop = findViewById(R.id.btnStop);
-        intent = new Intent(this,MusicService.class);
+        intent = new Intent(this, MusicService.class);
         mBtnStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
