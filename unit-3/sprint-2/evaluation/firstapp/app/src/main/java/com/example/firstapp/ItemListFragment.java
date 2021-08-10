@@ -1,5 +1,6 @@
 package com.example.firstapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,13 @@ public class ItemListFragment extends Fragment {
     private RecyclerView recyclerView;
     private List<ResponseModel> responseModelList = new ArrayList<>();
     private ItemAdapter itemAdapter;
+    private Context context ;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,7 +75,7 @@ public class ItemListFragment extends Fragment {
 
 
     private void setRecyclerView(){
-        itemAdapter = new ItemAdapter(responseModelList);
+        itemAdapter = new ItemAdapter((FragmentListner) context,responseModelList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(itemAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);

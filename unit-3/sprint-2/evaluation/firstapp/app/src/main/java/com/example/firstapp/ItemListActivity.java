@@ -7,8 +7,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
-public class ItemListActivity extends AppCompatActivity {
+public class ItemListActivity extends AppCompatActivity implements FragmentListner{
     private FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,4 +25,11 @@ public class ItemListActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemClicked(Bundle bundle) {
+        ItemDetailsFragment fragment = new ItemDetailsFragment();
+        fragment.setArguments(bundle);
+        fragmentManager.beginTransaction().replace(R.id.flcontainer,fragment).addToBackStack("frag2").commit();
+
+    }
 }
