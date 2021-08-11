@@ -11,7 +11,7 @@
         android:id="@+id/btnDownload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Download File"
+        android:text="@string/download_file"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -23,6 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="500dp"
         android:layout_margin="10dp"
+        android:background="@color/purple_200"
         app:layout_constraintBottom_toTopOf="@+id/btnDownload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +34,8 @@
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Data Will Show Here"
-            android:inputType="textMultiLine"/>
+            android:text="@string/data_will_show_here"
+            android:inputType="textMultiLine"
+            tools:ignore="TextViewEdits" />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

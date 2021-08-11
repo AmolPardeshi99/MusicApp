@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IntentServiceDownloadFile</string>
+    <string name="data_will_show_here">Data Will Show Here</string>
+    <string name="download_file">Download File</string>
 </resources>
