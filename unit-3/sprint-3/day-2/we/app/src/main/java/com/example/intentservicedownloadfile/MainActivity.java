@@ -9,10 +9,12 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button mBtnDownloadFile;
+    private TextView mtvData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         Intent intent = new Intent(this, DownloadIntentService.class);
         mBtnDownloadFile = findViewById(R.id.btnDownload);
+        mtvData = findViewById(R.id.tvData);
         mBtnDownloadFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,11 +43,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(context,intent.getStringExtra("data"),Toast.LENGTH_LONG).show();
+           String data =  intent.getStringExtra("data");
+           mtvData.setText(data);
         }
     };
 }
