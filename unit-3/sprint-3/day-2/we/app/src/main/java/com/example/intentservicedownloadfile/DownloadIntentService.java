@@ -48,7 +48,7 @@ public class DownloadIntentService extends IntentService {
                 writer.write(ch);
                 data = reader.read();
             }
-
+            //Reading File
             FileInputStream fileInputStream = new FileInputStream(file);
             int filedata = fileInputStream.read();
             StringBuffer stringBuffer = new StringBuffer();
@@ -57,7 +57,10 @@ public class DownloadIntentService extends IntentService {
                 stringBuffer = stringBuffer.append(ch);  // mutable in nature
                 filedata = fileInputStream.read();
             }
-
+            // Setting Broadcast and sending to mainactivity
+            Intent intent = new Intent("com.intentService.broadcast");
+            intent.putExtra("data",stringBuffer.toString());
+            sendBroadcast(intent);
         } catch (Exception e) {
             e.printStackTrace();
         }
