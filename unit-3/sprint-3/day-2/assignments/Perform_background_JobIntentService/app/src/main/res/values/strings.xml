@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Perform_background_JobIntentService</string>
+    <string name="jobid_1">JobId 1</string>
+    <string name="jobid_2">JobId 2</string>
+</resources>
