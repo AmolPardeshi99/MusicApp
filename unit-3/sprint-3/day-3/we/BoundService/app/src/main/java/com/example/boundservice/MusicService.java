@@ -12,12 +12,6 @@ public class MusicService extends Service {
     private MediaPlayer mediaPlayer;
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-
-    }
-
-    @Override
     public IBinder onBind(Intent intent) {
         return new ServiceBinder();
     }

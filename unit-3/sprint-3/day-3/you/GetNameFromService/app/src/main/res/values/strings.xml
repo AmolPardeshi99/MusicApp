@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetNameFromService</string>
+    <string name="start_service">Start Service</string>
+    <string name="get_name_from_service">Get Name from service</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="my_name_will_display_here">My Name will Display here</string>
+</resources>
