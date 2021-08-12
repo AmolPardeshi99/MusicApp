@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/my_name_will_display_here"
+        android:text="Here text will be shown"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold" />

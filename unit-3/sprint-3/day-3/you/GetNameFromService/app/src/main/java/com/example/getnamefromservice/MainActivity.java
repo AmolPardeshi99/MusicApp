@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnStartService, mBtnStopService, mBtnGetName;
     private TextView mTvName;
     private Intent intent;
+    private Boolean ServiceStarted = false;
     private GetNameService getNameService;
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
@@ -43,15 +44,19 @@ public class MainActivity extends AppCompatActivity {
         mBtnStartService.setOnClickListener(v -> {
             intent = new Intent(this,GetNameService.class);
             bindService(intent,serviceConnection,BIND_AUTO_CREATE);
+            ServiceStarted = true;
         });
 
         mBtnGetName.setOnClickListener(v -> {
-            mTvName.setText(getNameService.getName());
+            if (ServiceStarted) {
+                mTvName.setText(getNameService.getName());
+            }
         });
 
         mBtnStopService.setOnClickListener(v -> {
             mTvName.setText("Here text will be shown");
             stopService(intent);
+            ServiceStarted = false;
         });
     }
 }
