@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.JobIntentService;
 
 public class MyIntentService extends JobIntentService {
-    // logt and logd
+    // logt and logd shortcuts
     @Override
     public void onCreate() {
         super.onCreate();
