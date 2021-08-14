@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PlayMusicActivity extends AppCompatActivity {
 
@@ -50,8 +51,8 @@ public class PlayMusicActivity extends AppCompatActivity {
         mBtnStop = findViewById(R.id.btnStopService);
         mBtnPlay = findViewById(R.id.btnPlay);
         mBtnPause = findViewById(R.id.btnPause);
-
         mBtnStart.setOnClickListener(v -> {
+            Toast.makeText(this,"Service Started",Toast.LENGTH_SHORT).show();
             serviceIntent = new Intent(PlayMusicActivity.this,MusicService.class);
             serviceIntent.putExtra("MusicNameFrom",intent1.getStringExtra("MusicName"));
             bindService(serviceIntent,serviceConnection,BIND_AUTO_CREATE);
@@ -60,14 +61,17 @@ public class PlayMusicActivity extends AppCompatActivity {
 
         mBtnPlay.setOnClickListener(v -> {
             if (isServiceStarted) musicService.play();
+            Toast.makeText(this,"Music Playing",Toast.LENGTH_SHORT).show();
         });
 
         mBtnPause.setOnClickListener(v -> {
             if (isServiceStarted) musicService.pause();
+            Toast.makeText(this,"Music Paused",Toast.LENGTH_SHORT).show();
         });
 
         mBtnStop.setOnClickListener(v -> {
             stopService(serviceIntent);
+            Toast.makeText(this,"Service Stopped",Toast.LENGTH_SHORT).show();
             isServiceStarted = false;
         });
     }
