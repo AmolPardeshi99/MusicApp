@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">APMusicApp</string>
+    <string name="music_name">Music Name</string>
+    <string name="todo">TODO</string>
+    <string name="start_service">Start Service</string>
+    <string name="pause_music">Pause Music</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="play_music">Play Music</string>
+</resources>
