@@ -14,9 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:textSize="17sp"
-        android:padding="5dp"
         android:gravity="center"
-        android:hint="Hello World!"
+        android:hint="Enter text here "
         />
     <Button
         android:id="@+id/btnFetch"
@@ -36,7 +35,7 @@
         android:textSize="17sp"
         android:padding="5dp"
         android:gravity="center"
-        android:text="Hello World!"
+        android:text="Email Id"
         />
     <TextView
         android:id="@+id/tvCompany"
@@ -46,7 +45,7 @@
         android:textSize="17sp"
         android:padding="5dp"
         android:gravity="center"
-        android:text="Hello World!"
+        android:text="Name "
          />
 
 </LinearLayout>

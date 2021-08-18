@@ -1,11 +1,12 @@
 package com.example.a18augyougetuserdetails
 
-import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+
 
 interface ApiService {
 
-
-
+    @GET("/api/users/{userId}")
+    fun getUser(@Path("userId") userId: Int): Call<ResponseModel>
 }
