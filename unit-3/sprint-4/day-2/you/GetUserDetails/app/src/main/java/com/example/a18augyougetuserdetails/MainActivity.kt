@@ -1,6 +1,7 @@
 package com.example.a18augyougetuserdetails
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -27,9 +28,8 @@ class MainActivity : AppCompatActivity() {
                     tvEmail.text = model!!.data.email
                     tvCompany.text = model?.data.firstName
                 }
-
                 override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(this@MainActivity,"Fail to load data",Toast.LENGTH_SHORT).show()
                 }
 
             })
