@@ -1,0 +1,2 @@
+rootProject.name = "18AugPostRequest_Kotlin"
+include ':app'
