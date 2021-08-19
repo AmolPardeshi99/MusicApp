@@ -4,19 +4,19 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class AnimalAdapter(private  val animalList: List<Animal>) :
+class AnimalAdapter(private val animalList: List<Animal>) :
     RecyclerView.Adapter<AnimalViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnimalViewHolder {
-    val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
         return AnimalViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
-    val model = animalList[position]
+        val model = animalList[position]
         holder.setData(model)
     }
 
     override fun getItemCount(): Int {
-    return animalList.size
+        return animalList.size
     }
 }

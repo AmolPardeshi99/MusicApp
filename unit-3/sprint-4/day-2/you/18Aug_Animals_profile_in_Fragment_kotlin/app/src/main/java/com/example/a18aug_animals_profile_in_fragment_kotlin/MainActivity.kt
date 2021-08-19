@@ -11,19 +11,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btnLoad.setOnClickListener{
+        btnLoad.setOnClickListener {
             whenButtonClicked()
             btnLoad.visibility = View.GONE
         }
-
     }
 
     private fun whenButtonClicked() {
         var fragmentManager = supportFragmentManager
         val animalFragment = AnimalFragment()
         val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.flcontainer,animalFragment).commit()
+        fragmentTransaction.replace(R.id.flcontainer, animalFragment).commit()
     }
-
 
 }
