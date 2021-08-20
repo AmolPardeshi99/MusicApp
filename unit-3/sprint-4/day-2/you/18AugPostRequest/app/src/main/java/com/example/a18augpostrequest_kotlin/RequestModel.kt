@@ -1,10 +1,14 @@
 package com.example.a18augpostrequest_kotlin
 
-import java.io.Serializable
+import com.google.gson.annotations.SerializedName
 
 data class RequestModel(
-	val email: String? = null,
-	val password: String? = null,
-	val title: String? = null,
-	val requestType: String? = null
+	@SerializedName("email")
+	var email: String,
+	@SerializedName("password")
+	var password: String,
+	@SerializedName("requestType")
+	var requestType: String,
+	@SerializedName("title")
+	var title: String
 )

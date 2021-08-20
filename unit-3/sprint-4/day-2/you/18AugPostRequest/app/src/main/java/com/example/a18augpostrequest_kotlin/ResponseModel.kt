@@ -1,10 +1,9 @@
 package com.example.a18augpostrequest_kotlin
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 
-class ResponseModel : Serializable {
+class ResponseModel {
     @SerializedName("email")
     val email: String? = null
 

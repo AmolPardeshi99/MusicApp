@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">18AugPostRequest_Kotlin</string>
+    <string name="post_the_data">Post the Data</string>
+    <string name="enter_request_type_here">Enter Request Type here</string>
+    <string name="enter_title_here">Enter Title here</string>
+    <string name="enter_password_here">Enter Password here</string>
+    <string name="enter_email_here">Enter email here</string>
 </resources>

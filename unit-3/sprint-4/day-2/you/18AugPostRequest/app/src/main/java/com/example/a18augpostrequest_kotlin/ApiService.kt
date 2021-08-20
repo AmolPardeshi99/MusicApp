@@ -8,8 +8,8 @@ import retrofit2.http.POST
 interface ApiService {
 
     @GET("posts")
-    fun getPost(): Call<ResponseModel?>?
+    fun getPost(): Call<ResponseModel>
 
     @POST("posts")
-    fun postData(@Body requestModel: RequestModel?): Call<ResponseModel?>?
+    fun postData(@Body requestModel: RequestModel): Call<ResponseModel>
 }
