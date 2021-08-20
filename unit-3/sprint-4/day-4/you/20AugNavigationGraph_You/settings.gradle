@@ -1,0 +1,2 @@
+rootProject.name = "20AUgNavigationGraph_You"
+include ':app'
