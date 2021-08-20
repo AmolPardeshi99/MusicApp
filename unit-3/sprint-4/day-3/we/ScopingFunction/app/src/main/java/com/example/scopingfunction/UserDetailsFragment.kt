@@ -14,7 +14,6 @@ class UserDetailsFragment : Fragment(R.layout.fragment_user_details) {
     private lateinit var responseDTO: ResponseDTO
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         btnFetchData.setOnClickListener{
             callAPi()
         }
