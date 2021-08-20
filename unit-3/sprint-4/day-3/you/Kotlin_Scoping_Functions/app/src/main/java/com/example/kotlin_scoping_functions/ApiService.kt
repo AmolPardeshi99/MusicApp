@@ -6,6 +6,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
+
     @GET("api/users/")
     fun getUserDetails(@Query("page") pageNo :Int): Call<ResponseDTO>
 }
