@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/etStartDate"
+        android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -16,6 +17,7 @@
 
     <EditText
         android:id="@+id/etEndDate"
+        android:inputType="date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -23,6 +25,7 @@
 
     <EditText
         android:id="@+id/etStartTime"
+        android:inputType="time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -30,6 +33,7 @@
 
     <EditText
         android:id="@+id/etEndTime"
+        android:inputType="time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

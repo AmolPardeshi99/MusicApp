@@ -52,6 +52,7 @@ class PriseDetailFragment : Fragment(R.layout.fragment_prise_detail) {
             intent.putExtra("endTime",endTime)
             intent.putExtra("currency",currency)
             intent.putExtra("prise",prise)
+            startActivity(intent)
         }
     }
 }

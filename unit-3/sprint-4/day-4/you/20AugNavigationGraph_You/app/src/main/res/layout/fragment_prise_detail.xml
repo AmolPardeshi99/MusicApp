@@ -9,6 +9,7 @@
 
     <EditText
         android:id="@+id/etCurrency"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -16,6 +17,7 @@
 
     <EditText
         android:id="@+id/etPrise"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
