@@ -1,5 +1,6 @@
 package com.example.app1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,7 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :ItemListener, AppCompatActivity() {
     private lateinit var resultList: List<Result>
     private var query = "hindi"
     private var isCalled = false;
@@ -48,9 +49,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerview() {
-        val songAdapter = SongAdapter(resultList)
+        val songAdapter = SongAdapter(resultList,this)
         val linearLayoutManager = LinearLayoutManager(this)
         recyclerview.adapter = songAdapter
         recyclerview.layoutManager = linearLayoutManager
     }
+
+    override fun onitemClicked(bundle: Bundle) {
+        var intent = Intent(this,MusicDetailsActivity::class.java)
+        intent.run {
+            putExtra("imageurl",bundle.getString("imageurl"))
+            putExtra("trackname",bundle.getString("trackname"))
+            putExtra("artistname",bundle.getString("artistname"))
+            putExtra("collectionname",bundle.getString("collectionname"))
+            startActivity(intent)
+        }
+    }
+
 }
