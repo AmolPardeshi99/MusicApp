@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivPreviewImage"
+            android:layout_width="150dp"
+            android:layout_margin="7dp"
+            android:layout_height="120dp"/>
+        <TextView
+            android:id="@+id/tvTrackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/ivPreviewImage"
+            android:text="Track Name"/>
+        <TextView
+            android:id="@+id/tvArtistName"
+            android:layout_below="@+id/tvTrackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/ivPreviewImage"
+            android:text="Artist Name"/>
+        <TextView
+            android:id="@+id/tvCollectionName"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/tvArtistName"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivPreviewImage"
+            android:text="Collection Name"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

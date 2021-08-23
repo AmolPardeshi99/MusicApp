@@ -17,7 +17,6 @@ class TimeAndDateFragment : Fragment(R.layout.fragment_time_and_date) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         getDataFromEventFrag()
-
     }
 
     private fun getDataFromEventFrag() {
