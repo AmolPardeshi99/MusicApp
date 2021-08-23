@@ -22,6 +22,7 @@ class SongAdapter(private val resultList: List<Result>, var itemListener: ItemLi
                 putString("trackname",model.trackName)
                 putString("artistname",model.artistName)
                 putString("collectionname",model.collectionName)
+                putString("songurl",model.previewUrl)
                 itemListener.onitemClicked(bundle)
             }
         }

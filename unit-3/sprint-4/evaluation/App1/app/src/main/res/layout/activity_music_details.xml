@@ -49,6 +49,7 @@
             android:layout_below="@+id/tv2ArtistName">
 
             <ImageButton
+                android:id="@+id/btnplay"
                 android:layout_width="0dp"
                 android:src="@drawable/ic_playbutton"
                 android:layout_height="match_parent"
@@ -56,6 +57,7 @@
                 android:layout_margin="8dp"
                 android:layout_weight="1"/>
             <ImageButton
+                android:id="@+id/btnpause"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#faf211"
