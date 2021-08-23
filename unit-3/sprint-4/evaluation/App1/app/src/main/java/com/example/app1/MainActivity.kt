@@ -11,17 +11,29 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var resultList: List<Result>
+    private var query = "hindi"
+    private var isCalled = false;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if(!isCalled) callAPi();
         btnSearch.setOnClickListener {
             callAPi()
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        isCalled = true;
+    }
+
     private fun callAPi() {
+
+        if (isCalled){
+            query = etSearchQuery.text.toString()
+        }
         val apiClient  =  Network.getInstance().create(ApiClient::class.java)
-        apiClient.getSong(etSearchQuery.text.toString()).enqueue(object : Callback<ResponseModel>{
+        apiClient.getSong(query).enqueue(object : Callback<ResponseModel>{
             override fun onResponse(call: Call<ResponseModel>, response: Response<ResponseModel>) {
               response?.run {
                     resultList = body()?.results!!

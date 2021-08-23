@@ -17,7 +17,7 @@
         android:background="@drawable/rectangle"
         android:gravity="center"
         android:inputType="textFilter"
-        android:text="@string/enter_song_name_here" />
+        android:hint="@string/enter_song_name_here" />
 
     <Button
         android:id="@+id/btnSearch"

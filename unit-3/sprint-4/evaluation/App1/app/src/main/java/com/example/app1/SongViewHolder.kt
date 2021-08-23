@@ -13,7 +13,7 @@ class SongViewHolder (private val view : View): RecyclerView.ViewHolder(view) {
                 tvArtistName.text = artistName
                 tvCollectionName.text = collectionName
                 tvTrackName.text = trackName
-                Glide.with(ivPreviewImage).load(previewUrl).into(ivPreviewImage)
+                Glide.with(ivPreviewImage).load(artworkUrl100).into(ivPreviewImage)
             }
         }
     }
