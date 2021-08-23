@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textStyle="bold"
+            android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/iv2SongImage"/>
 
@@ -34,12 +35,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:gravity="center"
             android:layout_below="@+id/tv2TrackName"/>
         <TextView
             android:id="@+id/tv2CollectionName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/tv2ArtistName"/>
 

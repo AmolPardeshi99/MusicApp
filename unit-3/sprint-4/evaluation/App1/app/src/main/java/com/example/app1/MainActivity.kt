@@ -51,7 +51,7 @@ class MainActivity :ItemListener, AppCompatActivity() {
 
     private fun setRecyclerview() {
         val songAdapter = SongAdapter(resultList,this)
-        val linearLayoutManager = GridLayoutManager(this,2)
+        val linearLayoutManager = LinearLayoutManager(this)
         recyclerview.adapter = songAdapter
         recyclerview.layoutManager = linearLayoutManager
     }

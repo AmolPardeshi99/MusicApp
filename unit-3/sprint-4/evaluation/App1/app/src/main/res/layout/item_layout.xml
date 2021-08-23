@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:textStyle="bold"
             android:layout_toRightOf="@+id/ivPreviewImage"
             android:text="Track Name"/>
         <TextView
@@ -30,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:textStyle="bold"
             android:layout_toRightOf="@+id/ivPreviewImage"
             android:text="Artist Name"/>
         <TextView
