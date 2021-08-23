@@ -18,7 +18,7 @@ class MusicDetailsActivity : AppCompatActivity() {
             tv2CollectionName.text = getStringExtra("collectionname")
             tv2TrackName.text = getStringExtra("trackname")
             Glide.with(iv2SongImage).load(getStringExtra("imageurl")).into(iv2SongImage)
-            MusicUrl = this.getStringExtra("songurl")!!
+            MusicUrl = getStringExtra("songurl")!!
         }
         intent1 = Intent(this,MusicService::class.java)
         btnplay.setOnClickListener {

@@ -62,7 +62,7 @@ class MainActivity :ItemListener, AppCompatActivity() {
             putExtra("trackname",bundle.getString("trackname"))
             putExtra("artistname",bundle.getString("artistname"))
             putExtra("collectionname",bundle.getString("collectionname"))
-            putExtra("song",bundle.getString("songurl"))
+            putExtra("songurl",bundle.getString("songurl"))
             startActivity(intent)
         }
     }
