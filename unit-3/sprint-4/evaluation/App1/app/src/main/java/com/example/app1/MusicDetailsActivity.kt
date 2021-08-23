@@ -21,6 +21,7 @@ class MusicDetailsActivity : AppCompatActivity() {
             MusicUrl = getStringExtra("songurl")!!
         }
         intent1 = Intent(this,MusicService::class.java)
+        intent1.putExtra("songurl",MusicUrl)
         btnplay.setOnClickListener {
             startService(intent1)
         }

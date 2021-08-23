@@ -43,7 +43,7 @@ class MusicService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         intent?.run {
-            url = intent.getStringExtra("songurl").toString()
+            url = getStringExtra("songurl").toString()
         }
         play()
         return super.onStartCommand(intent, flags, startId)
