@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -50,7 +51,7 @@ class MainActivity :ItemListener, AppCompatActivity() {
 
     private fun setRecyclerview() {
         val songAdapter = SongAdapter(resultList,this)
-        val linearLayoutManager = LinearLayoutManager(this)
+        val linearLayoutManager = GridLayoutManager(this,2)
         recyclerview.adapter = songAdapter
         recyclerview.layoutManager = linearLayoutManager
     }
