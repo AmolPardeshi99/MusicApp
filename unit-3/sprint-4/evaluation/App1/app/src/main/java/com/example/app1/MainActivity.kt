@@ -38,10 +38,8 @@ class MainActivity : AppCompatActivity() {
               response?.run {
                     resultList = body()?.results!!
                   setRecyclerview()
-
                 }
             }
-
             override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
                 Toast.makeText(this@MainActivity,"Data Fetching failed",Toast.LENGTH_SHORT).show()
             }
