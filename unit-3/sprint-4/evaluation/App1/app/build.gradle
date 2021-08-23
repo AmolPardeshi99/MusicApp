@@ -44,7 +44,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // Retrofit & OkHttp
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     // This library is used by retrofit internally to convert json-pojo and pojo-json
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'

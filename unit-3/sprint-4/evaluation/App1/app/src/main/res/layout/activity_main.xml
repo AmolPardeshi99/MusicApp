@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:orientation="vertical"
     android:background="@color/purple_200"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <EditText
@@ -14,14 +14,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:gravity="center"
         android:background="@drawable/rectangle"
-        android:text="@string/enter_song_name_here"/>
+        android:gravity="center"
+        android:inputType="textFilter"
+        android:text="@string/enter_song_name_here" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:text="@string/search" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
         android:id="@+id/recyclerview"
-        android:layout_margin="10dp"
-        android:layout_height="match_parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp" />
 
 </LinearLayout>
