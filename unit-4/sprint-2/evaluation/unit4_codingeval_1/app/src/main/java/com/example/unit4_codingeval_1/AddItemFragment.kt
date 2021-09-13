@@ -34,11 +34,16 @@ class AddItemFragment : Fragment() {
         btnSaveData.setOnClickListener {
             var name = tvitemName.text.toString()
             var desc = tvitemDesc.text.toString()
-            var prise = tvitemPrise.text.toString()
+            var prise = "RS: "+tvitemPrise.text.toString()
 
             // saving data in database using Co-Routines
-            CoroutineScope(Dispatchers.IO).launch {
+            CoroutineScope(Dispatchers.Main).launch {
                 databaseHandler.insertData(name,desc,prise)
+                tvitemDesc.setText("")
+                tvitemName.setText("")
+                tvitemPrise.setText("")
+
+
             }
         }
     }
