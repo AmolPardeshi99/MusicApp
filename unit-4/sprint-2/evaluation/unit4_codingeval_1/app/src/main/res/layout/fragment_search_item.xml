@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".SearchItemFragment">
 
     <TextView
@@ -17,8 +17,21 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/etSearchQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:padding="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="45dp"
+        android:inputType="textPersonName"
+        />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_height="wrap_content" />
