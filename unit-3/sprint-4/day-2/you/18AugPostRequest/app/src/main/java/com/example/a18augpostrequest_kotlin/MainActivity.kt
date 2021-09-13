@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val email = etEmail.text.toString()
         val password = etPassword.text.toString()
         val title = etTitle.text.toString()
-        val requestModel : RequestModel = RequestModel(email,password,requestType,title)
+        val requestModel  = RequestModel(email,password,requestType,title)
         apiService.postData(requestModel).enqueue(object : Callback<ResponseModel>{
             override fun onResponse(call: Call<ResponseModel>, response: Response<ResponseModel>) {
 

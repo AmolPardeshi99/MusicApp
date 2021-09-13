@@ -40,19 +40,25 @@ class PriseDetailFragment : Fragment(R.layout.fragment_prise_detail) {
 
         btnPreview.setOnClickListener {
 
-            var intent = Intent(it.context,PreviewActivity::class.java)
-            var currency = etCurrency.text.toString()
-            var prise = etPrise.text.toString()
+            it.run {
+                var intent = Intent(context, PreviewActivity::class.java)
+                var currency = etCurrency.text.toString()
+                var prise = etPrise.text.toString()
 
-            intent.putExtra("title",title)
-            intent.putExtra("description",description)
-            intent.putExtra("startDate",startDate)
-            intent.putExtra("endDate",endDate)
-            intent.putExtra("startTime",startTime)
-            intent.putExtra("endTime",endTime)
-            intent.putExtra("currency",currency)
-            intent.putExtra("prise",prise)
-            startActivity(intent)
+
+                intent.run {
+                putExtra("title", title)
+                putExtra("description", description)
+                putExtra("startDate", startDate)
+                putExtra("endDate", endDate)
+                putExtra("startTime", startTime)
+                putExtra("endTime", endTime)
+                putExtra("currency", currency)
+                putExtra("prise", prise)
+                startActivity(intent)
+
+                }
+            }
         }
     }
 }

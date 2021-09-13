@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SearchItemFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="15dp"
+        android:text="Add Item Fragment"/>
+
+    <EditText
+        android:id="@+id/tvitemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:padding="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="45dp"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/tvitemDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:padding="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="45dp"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/tvitemPrise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:padding="10dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="45dp"
+        android:inputType="textPersonName"
+        />
+    <Button
+        android:id="@+id/btnSaveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Save "
+        android:padding="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="35dp"
+        android:inputType="textPersonName"
+        />
+</LinearLayout>
