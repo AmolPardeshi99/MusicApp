@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import com.example.unit4_codingeval_1.recyclerview.ModelClass
 
 class DatabaseHandler(val context: Context):
     SQLiteOpenHelper(context, DB_NAME,null, DB_VERSION) {
@@ -46,11 +47,34 @@ class DatabaseHandler(val context: Context):
     }
     // search and get data
 
+    fun searchData(queryData : String): MutableList<ModelClass>{
+        var itemList = mutableListOf<ModelClass>()
+        val db = readableDatabase
 
+         val query =  "select * from $TABLE_NAME " +
+                 "where $NAME like $queryData or $DESC like $queryData"
 
+        val cursor = db?.rawQuery(query,null)
 
+        if (cursor!=null && cursor.count>0){
+            cursor.moveToFirst()
+            do {
+                val id = cursor.getInt(cursor.getColumnIndex(ID))
+                val name = cursor.getString(cursor.getColumnIndex(NAME))
+                val desc = cursor.getString(cursor.getColumnIndex(DESC))
+                val prise = cursor.getString(cursor.getColumnIndex(PRISE))
 
+                 val modelclass = ModelClass()
+                modelclass.id = id
+                modelclass.name = name
+                modelclass.desc = desc
+                modelclass.prise = prise
 
+                itemList.add(modelclass)
+            }while (cursor.moveToNext())
+        }
+        return itemList
+    }
 
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
