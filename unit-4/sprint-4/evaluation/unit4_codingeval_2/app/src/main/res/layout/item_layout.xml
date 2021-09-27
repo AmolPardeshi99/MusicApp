@@ -38,10 +38,18 @@
             android:inputType="textMultiLine"
             android:text="Title of Pizza" />
 
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add To Cart"
+            android:layout_below="@id/tvDesc"
+            android:layout_margin="10dp"/>
+
         <ImageView
             android:id="@+id/ivPizzaImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
             android:layout_alignParentEnd="true"
             android:layout_marginHorizontal="10dp"
             android:padding="5dp"
