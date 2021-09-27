@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.unit4_codingeval_2.R
 import com.example.unit4_codingeval_2.activity.adapter.recyclerview.PizzaAdapter
 import com.example.unit4_codingeval_2.activity.adapter.recyclerview.PizzaModel
+import com.example.unit4_codingeval_2.model.remote.model.Crust
 import com.example.unit4_codingeval_2.model.remote.retrofit.APIService
 import com.example.unit4_codingeval_2.model.remote.retrofit.ItemOnClickListener
 import com.example.unit4_codingeval_2.model.remote.retrofit.Network
@@ -19,7 +20,8 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity(),ItemOnClickListener {
 
     lateinit var pizzaAdapter: PizzaAdapter
-    lateinit var pizzaList: MutableList<PizzaModel>
+    var pizzaList= mutableListOf<PizzaModel>()
+    var crustList = listOf<Crust>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +35,19 @@ class MainActivity : AppCompatActivity(),ItemOnClickListener {
             val api  = Network.getRetrofit().create(APIService::class.java)
             val response = api.getAllPizzaData()
 
-            var pizzaModel : PizzaModel = PizzaModel()
-            pizzaModel.desc = response?.description
-            pizzaModel.name = response?.name
-            pizzaModel.prize = 150.0
 
-            pizzaList.add(pizzaModel)
+            crustList = response.crusts!!
+
+            for (i in crustList){
+                var pizzaModel : PizzaModel = PizzaModel()
+                pizzaModel.desc = response?.description
+                pizzaModel.name = i.name
+                pizzaModel.prize = i.sizes?.get(0)?.price?.toDouble()
+                pizzaList.add(pizzaModel)
+            }
+
+
+
 
             CoroutineScope(Dispatchers.Main).launch {
                 recyclerview.adapter = PizzaAdapter(this@MainActivity,pizzaList,this@MainActivity)
