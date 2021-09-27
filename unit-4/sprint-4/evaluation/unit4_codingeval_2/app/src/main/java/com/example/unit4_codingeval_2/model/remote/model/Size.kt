@@ -1,4 +1,4 @@
-package com.example.unit4_codingeval_2.model.remote.retrofit
+package com.example.unit4_codingeval_2.model.remote.model
 
 
 import com.google.gson.annotations.SerializedName
