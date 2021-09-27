@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.unit4_codingeval_2">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Unit4_CodingEval_2">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.adapter.activity.CartScreen"
+            android:exported="true" />
+        <activity
+            android:name=".activity.adapter.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
