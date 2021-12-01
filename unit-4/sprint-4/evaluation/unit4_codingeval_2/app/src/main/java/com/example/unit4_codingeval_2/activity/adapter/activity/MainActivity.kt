@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.jetbrains.anko.startActivity
 
 
 class MainActivity : AppCompatActivity(),ItemOnClickListener {
@@ -26,8 +27,12 @@ class MainActivity : AppCompatActivity(),ItemOnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        // APi Calling
         callAPi()
+
+        tvCartButton.setOnClickListener {
+            startActivity<CartScreen>()
+        }
     }
 
     private fun callAPi() {
@@ -45,10 +50,6 @@ class MainActivity : AppCompatActivity(),ItemOnClickListener {
                 pizzaModel.prize = i.sizes?.get(0)?.price?.toDouble()
                 pizzaList.add(pizzaModel)
             }
-
-
-
-
             CoroutineScope(Dispatchers.Main).launch {
                 recyclerview.adapter = PizzaAdapter(this@MainActivity,pizzaList,this@MainActivity)
                 recyclerview.layoutManager = LinearLayoutManager(this@MainActivity)
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity(),ItemOnClickListener {
     override fun onItemClicked(pizzaModel: PizzaModel) {
 
     }
+
 
 
 }
