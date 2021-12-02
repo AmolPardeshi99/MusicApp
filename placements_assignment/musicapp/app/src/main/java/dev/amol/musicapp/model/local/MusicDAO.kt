@@ -15,14 +15,17 @@ interface MusicDAO {
 
     // fetch all data
     @Query("select * from musicList")
-    fun getAllMusic():LiveData<List<MusicData>>
+    fun getAllMusic(): LiveData<List<MusicData>>
 
     // delete all data
     @Query("delete from musicList")
     fun deleteAll()
 
-}
+    // fetch artist from data
+    @Query("select * from musicList where artistName LIKE '%' || :artist || '%'")
+    fun getArtist(artist: String): LiveData<List<MusicData>>
 
+}
 
 
 //    // fetch artist from data
