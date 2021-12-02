@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MusicApp</string>
+    <string name="hint">Search for artist name or song here</string>
 </resources>
