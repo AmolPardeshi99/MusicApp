@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="sample_news">Boeing dedicates $100 millions to victims of  737 Max crashes</string>
+    <string name="news_desc">Boeing will pay out 100$ million to help support the families and communities of the 346 people who died in two Max 737 crashes in the last year.</string>
+    <string name="news_date">2019-07-03</string>
+    <string name="source">CNN</string>
 </resources>
