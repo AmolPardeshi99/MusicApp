@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="ArticleData"
             type="dev.amol.newsapp.model.local.NewsData" />
